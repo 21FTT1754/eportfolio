@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>week13-1</title>
+</head>
+<body>
+	<input type="text" id="name" placeholder="name"><br>
+	<input type="radio" name="gender" value="male" id="male">Male
+	<input type="radio" name="gender" value="female" id="female">Female<br>
+	<input type="checkbox" name="wishlist" value="money"> money
+	<input type="checkbox" name="wishlist" value="travel"> travel
+	<input type="checkbox" name="wishlist" value="happiness"> happiness<br>
+	<select name="choice" id="wish">
+		<option value="eternal">eternal life</option>
+		<option value="young">forever young</option>
+		<option value="beauty">eternal beauty</option>
+	</select>
+	<button onclick="retGender()">reveal gender</button>
+	<button onclick="retWS1()">reveal wishlist</button>
+	<button onclick="">reveal select</button>
+
+	<script type="text/javascript">
+		function retGender(){
+			var male = document.GetElementById("male");
+			var female = document.GetElementById("female");
+			var selectedGender=" ";
+
+			if(male.checked){selectedGender="male is selected"}
+			if(female.checked){selectedGender="female is selected"}
+
+			alert(selectedGender);
+
+		}
+
+		function retWS1(){
+			var wishlists = document.GetElementsByName("wishlist");
+
+			var wishes= "Your wishes ";
+		// if (wishlists[0].checked){wishes=wishes+"money"+" "}
+		// if (wishlists[1].checked){wishes=wishes+"travel"+" "}
+		// if (wishlists[2].checked){wishes=wishes+"happiness"+" "}
+		if (wishlists[0].checked){wishes=wishes+wishlists[0].value+" "}
+		if (wishlists[1].checked){wishes=wishes+wishlists[1].value+" "}
+		if (wishlists[2].checked){wishes=wishes+wishlists[2].value+" "}
+
+		alert(wishes);
+
+		}
+	</script>
+
+</body>
+</html>
