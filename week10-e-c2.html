@@ -89,6 +89,19 @@
 
 <script type="text/javascript">
 
+  //write all the required functions here
+ //indentation is important
+ //also neatness
+
+// repitition is not in the syllabus. but students may use loop since  they learnt this concept in ITP
+//  you are expected to use since covered in the classes:
+// function with parameters
+// getElementsByName
+// getElementsById
+
+// additionally
+// getElementsByClassName
+
   //Calculation 
 
   var total=0; 
@@ -97,7 +110,7 @@
   var totalpurchasevege = 0;
   var totalpurchasemeat = 0;
 
-  //Hide All ElemenT START
+  //Hide
 
   function hide(){
     var allitems = document.getElementsByClassName("allitems");
@@ -120,15 +133,13 @@
    
   }
 
-  //Hide All ElemenT END
-
-  // Checkbox START
+  // Checkbox 
 
   function fruits(){
-    var items = document.getElementsByName("items");// Checkbox
-    var fruitquality = document.getElementsByName("fruitquality"); // Fruit Radio
-    var thirdlastrow = document.getElementsByClassName("thirdlastrow");// Finalize Button Row
-    var fruits = document.getElementsByClassName("fruits"); // Fruit Block
+    var items = document.getElementsByName("items");
+    var fruitquality = document.getElementsByName("fruitquality"); 
+    var thirdlastrow = document.getElementsByClassName("thirdlastrow");
+    var fruits = document.getElementsByClassName("fruits"); 
     
 
     if(items[0].checked){
@@ -178,10 +189,10 @@
   }
 
   function fishes(){
-    var items = document.getElementsByName("items");// Checkbox
-    var fishquality = document.getElementsByName("fishquality"); // Fish Radio
-    var thirdlastrow = document.getElementsByClassName("thirdlastrow");// Finalize Button Row
-    var fishes = document.getElementsByClassName("fishes"); // Fish Block
+    var items = document.getElementsByName("items")
+    var fishquality = document.getElementsByName("fishquality")
+    var thirdlastrow = document.getElementsByClassName("thirdlastrow")
+    var fishes = document.getElementsByClassName("fishes");
 
     if(items[1].checked){
 
@@ -239,10 +250,10 @@
 }
 
   function vegetables(){
-    var items = document.getElementsByName("items");// Checkbox
-    var vegetablesquality = document.getElementsByName("vegetablesquality"); // Vegetable Radio
-    var thirdlastrow = document.getElementsByClassName("thirdlastrow");// Finalize Button Row
-    var vegetables = document.getElementsByClassName("vegetables"); // Vegetable Block
+    var items = document.getElementsByName("items")
+    var vegetablesquality = document.getElementsByName("vegetablesquality");
+    var thirdlastrow = document.getElementsByClassName("thirdlastrow")
+    var vegetables = document.getElementsByClassName("vegetables"); 
 
     if(items[2].checked){
       for( x=0; x<vegetables.length;x++){
@@ -289,10 +300,10 @@
   }
 
    function meats(){
-    var items = document.getElementsByName("items");// Checkbox
-    var meatquality = document.getElementsByName("meatquality"); // Vegetable Radio
-    var thirdlastrow = document.getElementsByClassName("thirdlastrow");// Finalize Button Row
-    var meats = document.getElementsByClassName("meats"); // Vegetable Block
+    var items = document.getElementsByName("items")
+    var meatquality = document.getElementsByName("meatquality"); 
+    var thirdlastrow = document.getElementsByClassName("thirdlastrow");
+    var meats = document.getElementsByClassName("meats");
 
     if(items[3].checked){
       for( x=0; x<meats.length;x++){
@@ -338,10 +349,7 @@
 
   }
 
-  // Checkbox END
-
-
-  //Slider START
+  //Slider
 
   function fruitsSlider(){
     var fruitquality = document.getElementsByName("fruitquality");
@@ -459,9 +467,7 @@
     }
   }
 
-  //Slider END
-
-  //Finalize Buttom START
+  //Finalize Button
 
   function finalize(){
     var membership = document.getElementById("membership");
@@ -471,12 +477,11 @@
     var point = 0;
     var spent = mgtotal;
 
-    // point calc start
+   //points
     do{
       point += 10;
       spent -= 100;
     }while(spent>99);
-    // point calc end
 
     if(membership.selectedIndex==0 || membership.selectedIndex==1){
       document.getElementsByClassName("allitems")[22].style.display ="block";
@@ -509,9 +514,7 @@
 
   }
 
-   //Finalize Buttom END
-
-   // membership dropdown reset START
+   //Membership
 
    function membershipdd(){
     var membership = document.getElementById("membership");
@@ -544,15 +547,10 @@
     meats();
    }
 
-   // membership dropdown reset End
-
-   //hide total Purcase value when changing quality
 
    function fruitRadio(){
     document.getElementById("grandtotal").style.display="none";
    }
-
-   //hide total Purcase value when changing quality
 
    function membReset(){
     document.getElementById("membership").value = "0";
